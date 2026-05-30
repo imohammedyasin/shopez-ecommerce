@@ -1,0 +1,17 @@
+{
+  "name": "reversal-streetwear",
+  "version": "1.0.0",
+  "description": "REVERSAL - A premium, high-end MERN stack e-commerce web application featuring a stunning minimalist streetwear & combat-culture aesthetic, robust JWT authentication, real-time order history, interactive admin dashboards, dynamic promotional banners, and full-featured checkout.",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "build-client": "npm run build --prefix client",
+    "seed": "npm run seed --prefix server",
+    "start": "npm start --prefix server",
+    "build": "npm run install-all && npm run build-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
