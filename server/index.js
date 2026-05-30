@@ -26,7 +26,12 @@ const PORT = process.env.PORT || 6001;
 // Middleware
 app.use(express.json({ limit: '30mb' }));
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: ['https://shopez-ecommerce.vercel.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 // Routes
 app.use('/api/users', userRoutes);
